@@ -1,4 +1,7 @@
-import {useState} from 'react'
+import { useState } from 'react'
+// import  MainItems from './items/MainItems'
+import MainItems from './items/MainItems.js';
+
 
 export default function App() {
   const [bck, setBck] = useState(false)
@@ -56,6 +59,7 @@ export default function App() {
             Equip yourself with an Unique PC under -2k$
           </p>
         </button>
+        <MainItems />
       </div>
     </main>
   )
