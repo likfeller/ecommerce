@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const ItemList = ({ addItemToCart }) => {
   const items = [
-    { id: 1, name: 'Item 1', price: 10 },
-    { id: 2, name: 'Item 2', price: 20 },
-    { id: 3, name: 'Item 3', price: 25 },
-    { id: 4, name: 'Item 4', price: 30 },
+    { id: 1, name: "Item 1", price: 10 },
+    { id: 2, name: "Item 2", price: 20 },
+    { id: 3, name: "Item 3", price: 25 },
+    { id: 4, name: "Item 4", price: 30 },
   ];
 
   return (
@@ -14,17 +14,15 @@ const ItemList = ({ addItemToCart }) => {
         Item List
       </h2>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        {items.map(item => (
+        {items.map((item) => (
           <div key={item.id}>
             <h3>{item.name}</h3>
             <p>${item.price}</p>
             <button
-  onClick={() => addItemToCart(item)}
-  className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
->
-  Add to Cart
-</button>
-
+              onClick={() => addItemToCart(item)}
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+              Add to Cart
+            </button>
           </div>
         ))}
       </div>
