@@ -13,9 +13,9 @@ const ShoppingCart = ({ cartItems, removeItemFromCart, totalAmount }) => {
               {item.name} - ${item.price}
             </p>
             <button
-              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-2 rounded"
               onClick={() => removeItemFromCart(item.cartId)}>
-              Remove from Cart
+              X
             </button>
           </div>
         ))}

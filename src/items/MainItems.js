@@ -33,14 +33,18 @@ const MainItems = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <ItemList addItemToCart={addItem} />
+    <div className="flex justify-between p-8">
+      <div className="w-70 mr-80">
+        <ItemList addItemToCart={addItem} />
+      </div>
 
-      <ShoppingCart
-        cartItems={cartItems}
-        removeItemFromCart={removeItem}
-        totalAmount={totalAmount}
-      />
+      <div className="relative flex flex-col items-end w-64">
+        <ShoppingCart
+          cartItems={cartItems}
+          removeItemFromCart={removeItem}
+          totalAmount={totalAmount}
+        />
+      </div>
     </div>
   );
 };
