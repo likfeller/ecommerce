@@ -11,7 +11,6 @@ const MainItems = () => {
     const updatedCartItems = [...cartItems, { ...item, cartId: Date.now() }];
     setCartItems(updatedCartItems);
 
-    // Calculate the total amount
     const newTotalAmount = updatedCartItems.reduce(
       (total, item) => total + item.price,
       0
@@ -24,7 +23,6 @@ const MainItems = () => {
     const updatedCartItems = cartItems.filter((item) => item.cartId !== cartId);
     setCartItems(updatedCartItems);
 
-    // Recalculate the total amount after removing an item
     const newTotalAmount = updatedCartItems.reduce(
       (total, item) => total + item.price,
       0
