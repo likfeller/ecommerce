@@ -7,7 +7,6 @@ const MainItems = () => {
   const [totalAmount, setTotalAmount] = useState(0);
 
   const addItem = (item) => {
-    console.log("add", item);
     const updatedCartItems = [...cartItems, { ...item, cartId: Date.now() }];
     setCartItems(updatedCartItems);
 
@@ -19,7 +18,6 @@ const MainItems = () => {
   };
 
   const removeItem = (cartId) => {
-    console.log("removeItem", cartId);
     const updatedCartItems = cartItems.filter((item) => item.cartId !== cartId);
     setCartItems(updatedCartItems);
 
